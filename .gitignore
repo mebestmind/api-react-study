@@ -1,0 +1,18 @@
+
+# 백엔드 보안 파일 및 가상환경
+backend/.env
+backend/venv/
+backend/__pycache__/
+
+# 프론트엔드 노드 모듈 
+frontend/node_modules/
+
+
+# 이미 올라간 파일은 2단계: 깃(Git)의 기억에서 기존 파일 지우기 (★가장 중요)
+# 주의: 내 컴퓨터의 실제 파일은 안 지워지고, Git의 추적 목록에서만 지워집니다!
+
+# 1. frontend 폴더의 .env 추적 해제
+# git rm --cached frontend/.env
+
+# 2. python_study 폴더의 .env 추적 해제
+# git rm --cached python_study/.env
