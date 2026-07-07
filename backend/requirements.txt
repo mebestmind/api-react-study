@@ -1,0 +1,10 @@
+# 기존 (풀스택 기본)
+fastapi
+uvicorn[standard]
+supabase
+python-dotenv
+
+# 로그인/회원가입(방법 B)을 위해 추가
+passlib[bcrypt]
+python-jose[cryptography]
+python-multipart
