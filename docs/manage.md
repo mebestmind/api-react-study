@@ -6,29 +6,40 @@
 
 ## 1. 프로젝트 생성
 
-### React (TypeScript 템플릿)
-프론트엔드 디렉토리 `frontend`를 자동 생성합니다.
+루트 폴더에서 아래 명령어를 실행한다.
 
 ```bash
-npx create-react-app frontend --template typescript
-cd frontend
-npm start   # 개발 서버 시작
-# 서버 중지: Ctrl + C
+npm run dev
 ```
 
-### Python
-로컬에 Python 가상환경을 만들어 사용합니다.
+실행되면 다음 두 서버가 동시에 시작된다.
+| 영역 | 실행 명령 | 기본 주소 |
+| --- | --- | --- |
+| 백엔드 | `uvicorn main:app --reload` | `http://localhost:8000` |
+| 프론트엔드 | `npm start` | `http://localhost:3000` |
+
+
+## 2. 프로젝트 종료
+
+개발 서버를 종료할 때는 실행 중인 터미널에서 아래 키를 누른다.
+```bash
+Ctrl + C
+```
+
+
+## 개발 서버 통합 실행 스크립트
+루트의 package.json 파일에 아래 스크립트 참고 
 
 ```bash
-mkdir python_study   # 디렉토리 생성 (필수)
-cd python_study
-python -m venv venv
-# 가상환경 활성화
-# Windows: venv\Scripts\activate
-# macOS / Linux: source venv/bin/activate
+"scripts": {
+  "dev": "concurrently -n BACKEND,FRONTEND -c blue,green \"cd backend && .\\venv\\Scripts\\activate && uvicorn main:app --reload\" \"cd frontend && npm start\"",
+  "test": "echo \"Error: no test specified\" && exit 1"
+}
 ```
 
 ---
+
+
 
 ## 2. GitHub 소스 업로드 방법
 
