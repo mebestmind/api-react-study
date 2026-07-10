@@ -1,5 +1,28 @@
 {
-  "dependencies": {
-    "react-router-dom": "^7.18.1"
+  "name": "api-react-study",
+  "version": "1.0.0",
+  "description": "이 프로젝트는 React + FastAPI + Supabase로 구성된 풀스택 스마트 메모장 앱입니다.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "concurrently -n BACKEND,FRONTEND -c blue,green \"cd backend && .\\venv\\Scripts\\activate && uvicorn main:app --reload\" \"cd frontend && npm start\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mebestmind/api-react-study.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mebestmind/api-react-study/issues"
+  },
+  "homepage": "https://github.com/mebestmind/api-react-study#readme",
+  "devDependencies": {
+    "concurrently": "^9.0.0"
   }
 }
